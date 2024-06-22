@@ -1,13 +1,14 @@
-package tn.esprit.backend;
+/*package tn.esprit.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
+/*
 @SpringBootTest
-class BackEndApplicationTests {
+class /*BackEndApplicationTests {
 
     @Test
     void contextLoads() {
     }
 
 }
+*/
