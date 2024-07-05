@@ -45,7 +45,7 @@ public class PropertyController {
             property.setPostedDate(propertyDetails.getPostedDate());
             property.setImage(propertyDetails.getImage());
             //property.setUser(propertyDetails.getUser());
-            //property.setFeedbacks(propertyDetails.getFeedbacks());
+            property.setFeedbacks(propertyDetails.getFeedbacks());
             Property updatedProperty = propertyServiceInterface.updateProperty(property);
             return ResponseEntity.ok(updatedProperty);
         } else {
