@@ -1,6 +1,5 @@
 package tn.esprit.backend.configuration;
 
-import tn.esprit.backend.service.serviceInterface.IService;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -10,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
+import tn.esprit.backend.service.serviceInterface.IServiceReclamation;
 
 
 @Component
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 @EnableScheduling
 @EnableAspectJAutoProxy
 public class LoggingAspect {
-     IService iService;
+     IServiceReclamation iServiceReclamation;
     Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
     @After("execution(* tn.esprit.backend.service.serviceInterface.*.add*(..))")
     public void LogMethod(JoinPoint joinPoint) {
@@ -35,7 +35,7 @@ public class LoggingAspect {
     }*/
     /*@Scheduled(cron = "0 0 0 1 * ?")
     public void getEmployeByDonation() {
-        iService.getBestEmployeByDonations();
+        iServiceReclamation.getBestEmployeByDonations();
     }
 
     //@Scheduled(cron = "0 0 0 1 * ?") // Exécuté le 1er de chaque mois à minuit
@@ -52,7 +52,7 @@ public class LoggingAspect {
     }
     @Scheduled(cron = "0 0 0 1 * ?")
     public void getEmployeByDonation() {
-        iService.getEmployeByDonation();
+        iServiceReclamation.getEmployeByDonation();
     }
 
     @Around("execution(* tn.esprit.spring.service.*.getEmployeByDonation(..))")

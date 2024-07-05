@@ -4,16 +4,17 @@ import org.springframework.stereotype.Service;
 import tn.esprit.backend.entity.Reclamation;
 import tn.esprit.backend.entity.ReclamationType;
 import tn.esprit.backend.repository.ReclamationRepository;
-import tn.esprit.backend.service.serviceInterface.IService;
 import lombok.AllArgsConstructor;
 
 import lombok.extern.slf4j.Slf4j;
+import tn.esprit.backend.service.serviceInterface.IServiceReclamation;
+
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 @Slf4j
-public class ImplService implements IService {
+public class ImplServiceReclamationReclamation implements IServiceReclamation {
 
 ReclamationRepository reclamationRepository;
 

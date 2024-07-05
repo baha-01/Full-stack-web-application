@@ -6,7 +6,7 @@ import tn.esprit.backend.entity.ReclamationType;
 
 import java.util.List;
 
-public interface IService {
+public interface IServiceReclamation {
     List<Reclamation> retrieveAllReclamations();
     Reclamation addReclamation (Reclamation reclamation );
     Reclamation updateReclamation (Reclamation reclamation);
