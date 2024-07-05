@@ -6,6 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -45,4 +46,8 @@ public class Property implements Serializable {
     // @ToString.Exclude
     // @JsonIgnore
     // User user;
+
+//    @OneToMany(mappedBy = "property" ,cascade = CascadeType.REMOVE)
+//    @ToString.Exclude
+//    List<Feedback> feedbacks;
 }
