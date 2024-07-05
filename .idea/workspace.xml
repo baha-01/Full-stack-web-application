@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb393647-0904-4519-a5da-e7a21c008006" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/configuration/LoggingAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/entity/Reclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/entity/ReclamationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/repository/ReclamationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Full-stack-web-application.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/BackEndApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/BackEndApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontEnd/tsconfig.spec.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2hqDxEYBfQeAdHXiLOh0Y5i1PTa" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "khadija",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/mesprojetsEclipse/eclipse-workspace/kadImmo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "C:\\mesprojetsEclipse\\eclipse-workspace\\missionEnreprise\\Full-stack-web-application\\frontEnd\\ancien\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tn.esprit.backend.configuration" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.tn.esprit.backend in backEnd">
+    <configuration name="generated-requests | #67" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="67" requestIdentifier="#67" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tn.esprit.backend in backEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tn.esprit.backend" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="backEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.backend.BackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.tn.esprit.backend in backEnd" />
+        <item itemvalue="HTTP Request.generated-requests | #67" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb393647-0904-4519-a5da-e7a21c008006" name="Changes" comment="" />
+      <created>1718312959441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718312959441</updated>
+      <workItem from="1718312960504" duration="8291000" />
+      <workItem from="1718820553566" duration="7856000" />
+      <workItem from="1720098374470" duration="10947000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/backEnd/src/test/java/tn/esprit/backend/entity/Reclamation.java</url>
+          <line>26</line>
+          <properties field="description" class="tn.esprit.backend.entity.Reclamation" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
