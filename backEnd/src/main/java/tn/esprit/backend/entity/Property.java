@@ -1,6 +1,5 @@
 package tn.esprit.backend.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -38,6 +37,9 @@ public class Property implements Serializable {
 
     @Temporal(TemporalType.DATE)
     Date postedDate;
+
+    @Lob
+    private byte[] image;
 
     // @ManyToOne
     // @ToString.Exclude
