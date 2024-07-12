@@ -1,5 +1,6 @@
 package tn.esprit.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -19,14 +20,14 @@ public class Feedback implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter
-    Integer feedbackId;
+    private Long feedbackId;
 
-    String content;
+    private String content;
 
-    Integer rating;
+    private Integer rating;
 
     @Temporal(TemporalType.DATE)
-    Date datePosted;
+    private Date datePosted;
 
     // @ManyToOne
     // @ToString.Exclude
@@ -34,6 +35,7 @@ public class Feedback implements Serializable {
     // User user;
 
     @ManyToOne
-    @JoinColumn(name = "property_id")
-    Property property;
+    @JoinColumn(name="property_id")
+    @JsonIgnore
+    private Property property;
 }
