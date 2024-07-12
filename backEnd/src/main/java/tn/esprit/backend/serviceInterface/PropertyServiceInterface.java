@@ -8,6 +8,6 @@ public interface PropertyServiceInterface {
     List<Property> getAllProperties();
     Property getPropertyById(Long id);
     Property saveProperty(Property property);
-    Property updateProperty(Long id, Property property);
+    //Property updateProperty(Long id, Property property);
     void deleteProperty(Long id);
 }

@@ -45,23 +45,23 @@ public class PropertyService implements PropertyServiceInterface {
         return propertyRepository.save(property);
     }
 
-    @Override
-    public Property updateProperty(Long id, Property propertyDetails) {
-        Property property = propertyRepository.findById(id).orElse(null);
-        if (property!=null) {
-            property.setTitle(propertyDetails.getTitle());
-            property.setDescription(propertyDetails.getDescription());
-            property.setPrice(propertyDetails.getPrice());
-            property.setLocation(propertyDetails.getLocation());
-            property.setType(propertyDetails.getType());
-            property.setStatus(propertyDetails.getStatus());
-            property.setPostedDate(propertyDetails.getPostedDate());
-            property.setImage(propertyDetails.getImage());
-            return propertyRepository.save(property);
-        } else {
-            return null;
-        }
-    }
+//    @Override
+//    public Property updateProperty(Long id, Property propertyDetails) {
+//        Property property = propertyRepository.findById(id).orElse(null);
+//        if (property!=null) {
+//            property.setTitle(propertyDetails.getTitle());
+//            property.setDescription(propertyDetails.getDescription());
+//            property.setPrice(propertyDetails.getPrice());
+//            property.setLocation(propertyDetails.getLocation());
+//            property.setType(propertyDetails.getType());
+//            property.setStatus(propertyDetails.getStatus());
+//            property.setPostedDate(propertyDetails.getPostedDate());
+//            property.setImage(propertyDetails.getImage());
+//            return propertyRepository.save(property);
+//        } else {
+//            return null;
+//        }
+//    }
 
     private void calculateAndSetAverageRating(Property property) {
         List<Feedback> feedbacks = property.getFeedbacks();
