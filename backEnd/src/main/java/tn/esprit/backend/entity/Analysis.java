@@ -3,7 +3,6 @@ package tn.esprit.backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.apache.catalina.User;
 
 import java.io.Serializable;
 import java.util.Date;
