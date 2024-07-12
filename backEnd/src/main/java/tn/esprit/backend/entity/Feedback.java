@@ -3,7 +3,6 @@ package tn.esprit.backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.apache.catalina.User;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -16,17 +15,25 @@ import java.util.Date;
 @Builder
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Analysis implements Serializable {
+public class Feedback implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter
-    Integer analysisId;
+    Integer feedbackId;
 
-    String report;
+    String content;
 
-    Date dateGenerated;
+    Integer rating;
+
+    @Temporal(TemporalType.DATE)
+    Date datePosted;
+
+    // @ManyToOne
+    // @ToString.Exclude
+    // @JsonIgnore
+    // User user;
 
     @ManyToOne
-    @JoinColumn(name = "user")
-    User user;
+    @JoinColumn(name = "property_id")
+    Property property;
 }
