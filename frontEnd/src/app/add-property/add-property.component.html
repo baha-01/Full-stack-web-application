@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center">Create New Property</h2>
+      <form class="form-group" [formGroup]="FormAddProperty" (ngSubmit)="onSubmit()" #propertyForm="ngForm">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title:</label>
+          <input class="form-control" type="text" id="title" formControlName="title" required [(ngModel)]="property.title" name="title">
+          <div *ngIf="FormAddProperty.controls['title'].invalid && FormAddProperty.controls['title'].touched" class="alert alert-danger">
+            <p *ngIf="FormAddProperty.controls['title'].hasError('required')">Title is required</p>
+          </div>
+        </div>
+
+        <input type="hidden" id="date" [(ngModel)]="property.postedDate" name="date" />
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description:</label>
+          <textarea class="form-control" id="description" formControlName="description" required [(ngModel)]="property.description" name="description"></textarea>
+          <div *ngIf="FormAddProperty.controls['description'].invalid && FormAddProperty.controls['description'].touched" class="alert alert-danger">
+            <p *ngIf="FormAddProperty.controls['description'].hasError('required')">Description is required</p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="price" class="form-label">Price:</label>
+          <input class="form-control" type="number" id="price" formControlName="price" required [(ngModel)]="property.price" name="price">
+          <div *ngIf="FormAddProperty.controls['price'].invalid && FormAddProperty.controls['price'].touched" class="alert alert-danger">
+            <p *ngIf="FormAddProperty.controls['price'].hasError('required')">Price is required</p>
+            <p *ngIf="FormAddProperty.controls['price'].hasError('min')">Price must be at least 0</p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location:</label>
+          <input class="form-control" type="text" id="location" formControlName="location" required [(ngModel)]="property.location" name="location">
+          <div *ngIf="FormAddProperty.controls['location'].invalid && FormAddProperty.controls['location'].touched" class="alert alert-danger">
+            <p *ngIf="FormAddProperty.controls['location'].hasError('required')">Location is required</p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="type" class="form-label">Type:</label>
+          <select class="form-select" id="type" formControlName="type" required [(ngModel)]="property.type" name="type">
+            <option value="Sale">Sale</option>
+            <option value="Rent">Rent</option>
+          </select>
+          <div *ngIf="FormAddProperty.controls['type'].invalid && FormAddProperty.controls['type'].touched" class="alert alert-danger">
+            <p *ngIf="FormAddProperty.controls['type'].hasError('required')">Type is required</p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Image:</label>
+          <input class="form-control" type="file" id="image" (change)="onFileChange($event)">
+        </div>
+
+        <button class="btn btn-info" type="submit" [disabled]="FormAddProperty.invalid">Create Property</button>
+      </form>
+    </div>
+  </div>
+</div>

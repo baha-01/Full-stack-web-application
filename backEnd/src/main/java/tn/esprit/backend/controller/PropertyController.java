@@ -11,11 +11,14 @@ import tn.esprit.backend.entity.ResourceNotFoundException;
 import tn.esprit.backend.serviceInterface.FeedbackServiceInterface;
 import tn.esprit.backend.serviceInterface.PropertyServiceInterface;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Base64;
+import java.util.Date;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/property")
+@CrossOrigin
 public class PropertyController {
     @Autowired
     PropertyServiceInterface propertyServiceInterface;
@@ -58,9 +61,8 @@ public class PropertyController {
             property.setLocation(propertyDTO.getLocation());
             property.setType(propertyDTO.getType());
             property.setStatus(propertyDTO.getStatus());
-            property.setPostedDate(propertyDTO.getPostedDate());
+            property.setPostedDate(new Date());
             property.setImage(Base64.getDecoder().decode(propertyDTO.getImage()));
-
             Property savedProperty = propertyServiceInterface.saveProperty(property);
             return ResponseEntity.ok(savedProperty);
         } catch (Exception e) {

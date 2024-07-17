@@ -40,6 +40,7 @@ public class Property implements Serializable {
     private Date postedDate;
 
     @Lob
+    @Column(name = "image", columnDefinition = "MEDIUMBLOB")
     private byte[] image;
 
     @Transient
