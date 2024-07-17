@@ -1,17 +1,17 @@
 .card-img-top {
     max-width: 100%;
     height: auto;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-fit: cover; 
   }
   
   .custom-img {
-    max-height: 400px; /* Adjust this value to fit your design */
+    max-height: 400px;
     width: auto;
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 auto;
   }
   .card-title {
     text-align: center;
-    font-size: 2rem; /* Adjust this value to make the title bigger */
-    font-weight: bold; /* Optional: Make the title bold */
+    font-size: 2rem; 
+    font-weight: bold;
   }
   

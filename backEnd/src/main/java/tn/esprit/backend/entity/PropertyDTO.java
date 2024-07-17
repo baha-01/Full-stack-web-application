@@ -19,7 +19,6 @@ public class PropertyDTO {
     private PropertyType type;
     private PropertyStatus status;
     private Date postedDate;
-    private String image; // Base64 encoded image
+    private String image;
 
-    // Getters and Setters
 }

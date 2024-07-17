@@ -1,13 +1,10 @@
 <div class="container mt-4">
-  <!-- Search and filters row -->
   <div class="row mb-4">
-    <!-- Search input -->
     <div class="col-md-6">
       <label for="searchInput" class="form-label">Search (by title or location):</label>
       <input type="text" class="form-control" id="searchInput" [(ngModel)]="searchTerm" (input)="applyFilters()" placeholder="Enter search term...">
     </div>
 
-    <!-- Show available only toggle -->
     <div class="col-md-3">
       <label class="form-label d-block">Show Available Properties Only:</label>
       <div class="form-check form-switch">
@@ -16,7 +13,6 @@
       </div>
     </div>
 
-    <!-- Property type filters -->
     <div class="col-md-3">
       <label class="form-label d-block">Property Type:</label>
       <div class="form-check form-check-inline">
@@ -34,7 +30,6 @@
     </div>
   </div>
 
-  <!-- Property cards -->
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let property of filteredProperties">
       <div class="card h-100">

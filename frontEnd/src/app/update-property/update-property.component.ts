@@ -39,7 +39,6 @@ export class UpdatePropertyComponent implements OnInit {
     this.propertyService.updateProperty(this.propertyId, this.property).subscribe({
       next: (updatedProperty) => {
         console.log('Property updated successfully: ', updatedProperty);
-        // Optionally, navigate to the updated property details page or another route
         this.router.navigate(['/admin/property', this.propertyId]);
       },
       error: (err) => {

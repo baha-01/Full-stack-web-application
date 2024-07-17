@@ -9,10 +9,10 @@ import { Property } from '../models/Property';
 })
 export class ListPropertyComponent {
   listProperty: Property[] = [];
-  filteredProperties: Property[] = []; // Array to hold filtered properties
-  showAvailableOnly: boolean = false; // Toggle state
-  selectedType: string = 'all'; // Selected property type ('all', 'rent', 'sale')
-  searchTerm: string = ''; // Search term
+  filteredProperties: Property[] = []; 
+  showAvailableOnly: boolean = false; 
+  selectedType: string = 'all';
+  searchTerm: string = ''; 
 
   constructor(private propertyService: PropertyServiceService) {}
 
@@ -20,7 +20,7 @@ export class ListPropertyComponent {
     this.propertyService.getAllProperties().subscribe({
       next: (data) => {
         this.listProperty = data;
-        this.applyFilters(); // Apply initial filters
+        this.applyFilters(); 
       },
       error: (err) => console.log(err)
     });
@@ -46,9 +46,8 @@ export class ListPropertyComponent {
   }
 
   applyFilters(): void {
-    let filteredProperties = [...this.listProperty]; // Start with all properties
+    let filteredProperties = [...this.listProperty];
 
-    // Apply search filter
     if (this.searchTerm.trim() !== '') {
       const searchTermLower = this.searchTerm.toLowerCase();
       filteredProperties = filteredProperties.filter(property =>
@@ -57,12 +56,10 @@ export class ListPropertyComponent {
       );
     }
 
-    // Apply available only filter if checked
     if (this.showAvailableOnly) {
       filteredProperties = filteredProperties.filter(property => property.status === 'Available');
     }
 
-    // Apply property type filter
     if (this.selectedType !== 'all') {
       filteredProperties = filteredProperties.filter(property => {
         if (this.selectedType === 'rent') {
@@ -70,10 +67,10 @@ export class ListPropertyComponent {
         } else if (this.selectedType === 'sale') {
           return property.type === 'Sale';
         }
-        return true; // 'all' case
+        return true; 
       });
     }
 
-    this.filteredProperties = filteredProperties; // Update filtered properties list
+    this.filteredProperties = filteredProperties;
   }
 }

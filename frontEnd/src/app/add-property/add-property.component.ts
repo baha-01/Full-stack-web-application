@@ -34,7 +34,7 @@ export class AddPropertyComponent {
 
   onSubmit() {
     if (this.property.postedDate!=null) {
-      this.property.postedDate = new Date(this.property.postedDate); // Ensure property.date is a Date object
+      this.property.postedDate = new Date(this.property.postedDate); 
     }
     this.propertyService.createProperty(this.property).subscribe({
       next: () => this.router.navigate(['/admin/property']),
