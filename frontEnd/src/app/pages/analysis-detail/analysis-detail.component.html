@@ -1,0 +1,22 @@
+<div class="container">
+    <div *ngIf="analysis">
+      <h2>Analysis Details</h2>
+  
+      <div class="detail-item">
+        <label for="report"><strong>Report:</strong></label>
+        <p id="report">{{ analysis.report }}</p>
+      </div>
+  
+      <div class="detail-item">
+        <label for="user"><strong>User:</strong></label>
+        <p id="user">{{ analysis.user?.name }}</p>
+      </div>
+  
+      <a routerLink="/analysis-list" class="btn btn-primary">Back to Analysis List</a>
+    </div>
+  
+    <div *ngIf="!analysis">
+      <p>Loading...</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,6 @@
+<div *ngFor="let analysis of analyses">
+  <h2>{{ analysis.report }}</h2>
+  <p>{{ analysis.dateGenerated | date }}</p>
+  <a [routerLink]="['/analysis-detail/', analysis.analysisId]">View Details</a>
+</div>
+<a routerLink="/analysis-create">Create New Analysis</a>

@@ -1,0 +1,35 @@
+<form [formGroup]="analysisForm" (ngSubmit)="saveAnalysis()">
+  <div>
+    <label for="analysisId">Analysis ID:</label>
+    <input id="analysisId" formControlName="analysisId">
+    <div *ngIf="analysisForm.get('analysisId')?.invalid && (analysisForm.get('analysisId')?.dirty || analysisForm.get('analysisId')?.touched)">
+      Analysis ID is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="report">Report:</label>
+    <input id="report" formControlName="report">
+    <div *ngIf="analysisForm.get('report')?.invalid && (analysisForm.get('report')?.dirty || analysisForm.get('report')?.touched)">
+      Report is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="dateGenerated">Date Generated:</label>
+    <input id="dateGenerated" formControlName="dateGenerated">
+    <div *ngIf="analysisForm.get('dateGenerated')?.invalid && (analysisForm.get('dateGenerated')?.dirty || analysisForm.get('dateGenerated')?.touched)">
+      Date Generated is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="user">User:</label>
+    <input id="user" formControlName="user">
+    <div *ngIf="analysisForm.get('user')?.invalid && (analysisForm.get('user')?.dirty || analysisForm.get('user')?.touched)">
+      User is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="analysisForm.invalid">Save Analysis</button>
+</form>
