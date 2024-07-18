@@ -5,4 +5,5 @@ import tn.esprit.backend.entity.Analysis;
 import tn.esprit.backend.entity.Feedback;
 
 public interface AnalysisRepository extends JpaRepository<Analysis,Integer> {
+
 }

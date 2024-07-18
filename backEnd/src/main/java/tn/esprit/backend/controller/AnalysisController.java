@@ -28,6 +28,7 @@ public class AnalysisController {
         return analysis.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @CrossOrigin(origins = "http://localhost:4200/", maxAge = 3600)
     @PostMapping
     public Analysis createAnalysis(@RequestBody Analysis analysis) {
         return analysisServiceInterface.saveAnalysis(analysis);
