@@ -1,0 +1,17 @@
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; 
+  }
+  
+  .custom-img {
+    max-height: 400px;
+    width: auto;
+    margin: 0 auto; 
+  }
+  .card-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  

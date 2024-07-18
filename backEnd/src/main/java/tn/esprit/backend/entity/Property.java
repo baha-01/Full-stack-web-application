@@ -20,35 +20,37 @@ public class Property implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter
-    Integer propertyId;
+    private Long propertyId;
 
-    String title;
+    private String title;
 
-    String description;
+    private String description;
 
-    Double price;
+    private Double price;
 
-    String location;
-
-    @Enumerated(EnumType.STRING)
-    PropertyType type;
+    private String location;
 
     @Enumerated(EnumType.STRING)
-    PropertyStatus status;
+    private PropertyType type;
+
+    @Enumerated(EnumType.STRING)
+    private PropertyStatus status;
 
     @Temporal(TemporalType.DATE)
-    Date postedDate;
+    private Date postedDate;
 
     @Lob
+    @Column(name = "image", columnDefinition = "MEDIUMBLOB")
     private byte[] image;
+
+    @Transient
+    private Double averageRating;
 
     // @ManyToOne
     // @ToString.Exclude
     // @JsonIgnore
     // User user;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "property_id")
-    @ToString.Exclude
-    List<Feedback> feedbacks;
+    @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Feedback> feedbacks;
 }

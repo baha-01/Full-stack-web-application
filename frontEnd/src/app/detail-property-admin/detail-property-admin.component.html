@@ -1,0 +1,44 @@
+<div class="container mt-4" *ngIf="property">
+  <div class="card">
+    <img *ngIf="property.image" [src]="'data:image/jpeg;base64,' + property.image" class="card-img-top custom-img img-fluid" alt="Property Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ property.title }}</h5>
+      <p class="card-text"><strong>Description:</strong> {{ property.description }}</p>
+      <p class="card-text"><strong>Location:</strong> {{ property.location }}</p>
+      <p class="card-text"><strong>Type:</strong> {{ property.type }}</p>
+      <p class="card-text"><strong>Price:</strong> {{ property.price | currency }}</p>
+      <p class="card-text"><strong>Status:</strong> {{ property.status }}</p>
+      <p class="card-text"><strong>Posted Date:</strong> {{ property.postedDate | date: 'yyyy-MM-dd' }}</p>
+      <p class="card-text">
+        <strong>Average Rating:</strong>
+        <ng-container *ngFor="let star of getStarsArray(property.averageRating); let i = index">
+          <i [class]="star" aria-hidden="true"></i>
+        </ng-container>
+        <span>({{ property.feedbacks.length }} feedbacks)</span>
+      </p>
+      <div class="d-flex justify-content-between align-items-center">
+        <button type="button" class="btn btn-danger" (click)="deleteProperty()">Delete Property</button>
+        <button type="button" class="btn btn-warning" (click)="updateProperty()">Update Property</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h5>Feedbacks</h5>
+    <div *ngIf="property.feedbacks.length === 0" class="alert alert-info mt-3">
+      <h5>No Feedbacks</h5>
+    </div>
+    <div *ngFor="let feedback of property.feedbacks" class="card mt-3">
+      <div class="card-body">
+        <p class="card-text">
+          <ng-container *ngFor="let star of getStarsArray(feedback.rating); let i = index">
+            <i [class]="star" aria-hidden="true"></i>
+          </ng-container>
+          <span>{{ feedback.content }}</span>
+        </p>
+        <p class="card-text"><small class="text-muted">Posted on {{ feedback.datePosted | date: 'yyyy-MM-dd' }}</small></p>
+        <button type="button" class="btn btn-sm btn-danger" (click)="deleteFeedback(feedback.feedbackId)">Delete Feedback</button>
+      </div>
+    </div>
+  </div>
+</div>

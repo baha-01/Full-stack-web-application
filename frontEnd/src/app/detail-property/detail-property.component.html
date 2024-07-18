@@ -1,0 +1,54 @@
+<div class="container mt-4" *ngIf="property">
+  <div class="card">
+    <img *ngIf="property.image" [src]="'data:image/jpeg;base64,' + property.image" class="card-img-top custom-img img-fluid" alt="Property Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ property.title }}</h5>
+      <p class="card-text"><strong>Description:</strong> {{ property.description }}</p>
+      <p class="card-text"><strong>Location:</strong> {{ property.location }}</p>
+      <p class="card-text"><strong>Type:</strong> {{ property.type }}</p>
+      <p class="card-text"><strong>Price:</strong> {{ property.price | currency }}</p>
+      <p class="card-text"><strong>Status:</strong> {{ property.status }}</p>
+      <p class="card-text"><strong>Posted Date:</strong> {{ property.postedDate | date: 'yyyy-MM-dd' }}</p>
+      <p class="card-text">
+        <strong>Average Rating:</strong>
+        <ng-container *ngFor="let star of getStarsArray(property.averageRating); let i = index">
+          <i [class]="star" aria-hidden="true"></i>
+        </ng-container>
+        <span>({{ property.feedbacks.length }} feedbacks)</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h5>Add Feedback</h5>
+    <form (ngSubmit)="addFeedback()">
+      <div class="form-group">
+        <label for="rating">Rating:</label>
+        <select id="rating" [(ngModel)]="newFeedback.rating" name="rating" class="form-control" required>
+          <option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }} Star</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea id="content" [(ngModel)]="newFeedback.content" name="content" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2">Submit Feedback</button>
+    </form>
+  </div>
+
+  <div class="mt-4">
+    <h5>Feedbacks</h5>
+    <div *ngIf="property.feedbacks.length === 0" class="alert alert-info">No Feedbacks</div>
+    <div *ngFor="let feedback of property.feedbacks" class="card mt-2">
+      <div class="card-body">
+        <p class="card-text">
+          <ng-container *ngFor="let star of getStarsArray(feedback.rating); let i = index">
+            <i [class]="star" aria-hidden="true"></i>
+          </ng-container>
+          <span>{{ feedback.content }}</span>
+        </p>
+        <p class="card-text"><small class="text-muted">Posted on {{ feedback.datePosted | date: 'yyyy-MM-dd' }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
